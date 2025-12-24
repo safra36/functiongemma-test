@@ -1,0 +1,346 @@
+{
+  "train": [
+    {
+      "input": "Processor details?",
+      "output": "get_cpu_info"
+    },
+    {
+      "input": "What is using the most memory?",
+      "output": "get_process_info"
+    },
+    {
+      "input": "Running processes?",
+      "output": "get_process_info"
+    },
+    {
+      "input": "Health check - CPU, memory, and disk",
+      "output": "get_cpu_info,get_memory_info,get_disk_info"
+    },
+    {
+      "input": "Swap usage?",
+      "output": "get_memory_info"
+    },
+    {
+      "input": "OS information?",
+      "output": "get_system_info"
+    },
+    {
+      "input": "Show top processes",
+      "output": "get_process_info"
+    },
+    {
+      "input": "What's my memory usage?",
+      "output": "get_memory_info"
+    },
+    {
+      "input": "How much uptime does the system have?",
+      "output": "get_uptime_info"
+    },
+    {
+      "input": "What users are logged in?",
+      "output": "get_user_info"
+    },
+    {
+      "input": "Check the system uptime",
+      "output": "get_uptime_info"
+    },
+    {
+      "input": "How much free memory?",
+      "output": "get_memory_info"
+    },
+    {
+      "input": "What is the hostname?",
+      "output": "get_network_info"
+    },
+    {
+      "input": "User details?",
+      "output": "get_user_info"
+    },
+    {
+      "input": "What is my RAM usage?",
+      "output": "get_memory_info"
+    },
+    {
+      "input": "How long is the system up?",
+      "output": "get_uptime_info"
+    },
+    {
+      "input": "Top CPU processes?",
+      "output": "get_process_info"
+    },
+    {
+      "input": "What is my IP address?",
+      "output": "get_network_info"
+    },
+    {
+      "input": "How long has the system been running?",
+      "output": "get_uptime_info"
+    },
+    {
+      "input": "Network configuration?",
+      "output": "get_network_info"
+    },
+    {
+      "input": "Process information?",
+      "output": "get_process_info"
+    },
+    {
+      "input": "Distribution info?",
+      "output": "get_system_info"
+    },
+    {
+      "input": "Current user?",
+      "output": "get_user_info"
+    },
+    {
+      "input": "Check memory status",
+      "output": "get_memory_info"
+    },
+    {
+      "input": "Network details?",
+      "output": "get_network_info"
+    },
+    {
+      "input": "What's consuming resources?",
+      "output": "get_process_info,get_memory_info"
+    },
+    {
+      "input": "Kernel version?",
+      "output": "get_system_info"
+    },
+    {
+      "input": "Tell me about the processor",
+      "output": "get_cpu_info"
+    },
+    {
+      "input": "What's my IP?",
+      "output": "get_network_info"
+    },
+    {
+      "input": "Free disk space?",
+      "output": "get_disk_info"
+    },
+    {
+      "input": "How full is the disk?",
+      "output": "get_disk_info"
+    },
+    {
+      "input": "What is my CPU load?",
+      "output": "get_cpu_info"
+    },
+    {
+      "input": "Top memory processes?",
+      "output": "get_process_info"
+    },
+    {
+      "input": "What's the uptime?",
+      "output": "get_uptime_info"
+    },
+    {
+      "input": "Who is the current user?",
+      "output": "get_user_info"
+    },
+    {
+      "input": "CPU cores and load?",
+      "output": "get_cpu_info"
+    },
+    {
+      "input": "What's the CPU status?",
+      "output": "get_cpu_info"
+    },
+    {
+      "input": "RAM available?",
+      "output": "get_memory_info"
+    },
+    {
+      "input": "What are the CPU details?",
+      "output": "get_cpu_info"
+    },
+    {
+      "input": "How many CPU cores do I have?",
+      "output": "get_cpu_info"
+    },
+    {
+      "input": "Show storage information",
+      "output": "get_disk_info"
+    },
+    {
+      "input": "What is the system uptime?",
+      "output": "get_uptime_info"
+    },
+    {
+      "input": "Check network status",
+      "output": "get_network_info"
+    },
+    {
+      "input": "What is using the most CPU?",
+      "output": "get_process_info"
+    },
+    {
+      "input": "User list?",
+      "output": "get_user_info"
+    },
+    {
+      "input": "What is my disk space?",
+      "output": "get_disk_info"
+    },
+    {
+      "input": "Memory stats?",
+      "output": "get_memory_info"
+    },
+    {
+      "input": "Disk utilization?",
+      "output": "get_disk_info"
+    },
+    {
+      "input": "What Linux version?",
+      "output": "get_system_info"
+    },
+    {
+      "input": "How much disk space is available?",
+      "output": "get_disk_info"
+    },
+    {
+      "input": "Memory and swap information",
+      "output": "get_memory_info"
+    },
+    {
+      "input": "Check CPU information",
+      "output": "get_cpu_info"
+    },
+    {
+      "input": "Show system information",
+      "output": "get_system_info"
+    },
+    {
+      "input": "Check disk usage",
+      "output": "get_disk_info"
+    },
+    {
+      "input": "What is the kernel version?",
+      "output": "get_system_info"
+    },
+    {
+      "input": "IP address details?",
+      "output": "get_network_info"
+    },
+    {
+      "input": "Network and system info",
+      "output": "get_network_info,get_system_info"
+    },
+    {
+      "input": "Tell me about RAM",
+      "output": "get_memory_info"
+    },
+    {
+      "input": "Show network information",
+      "output": "get_network_info"
+    },
+    {
+      "input": "When was the system started?",
+      "output": "get_uptime_info"
+    },
+    {
+      "input": "List processes?",
+      "output": "get_process_info"
+    },
+    {
+      "input": "What OS am I running?",
+      "output": "get_system_info"
+    },
+    {
+      "input": "Show CPU information",
+      "output": "get_cpu_info"
+    },
+    {
+      "input": "Complete system status",
+      "output": "get_uptime_info,get_cpu_info,get_memory_info,get_disk_info,get_network_info"
+    }
+  ],
+  "validation": [
+    {
+      "input": "Disk storage details?",
+      "output": "get_disk_info"
+    },
+    {
+      "input": "Hostname information?",
+      "output": "get_network_info"
+    },
+    {
+      "input": "Show me full system diagnostics",
+      "output": "get_system_info,get_cpu_info,get_memory_info,get_disk_info"
+    },
+    {
+      "input": "Show me uptime info",
+      "output": "get_uptime_info"
+    },
+    {
+      "input": "What's the OS?",
+      "output": "get_system_info"
+    },
+    {
+      "input": "Show user information",
+      "output": "get_user_info"
+    },
+    {
+      "input": "System details?",
+      "output": "get_system_info"
+    },
+    {
+      "input": "Who's on the system?",
+      "output": "get_user_info"
+    },
+    {
+      "input": "Storage capacity?",
+      "output": "get_disk_info"
+    },
+    {
+      "input": "How many cores?",
+      "output": "get_cpu_info"
+    },
+    {
+      "input": "How much memory left?",
+      "output": "get_memory_info"
+    },
+    {
+      "input": "Currently logged in users?",
+      "output": "get_user_info"
+    },
+    {
+      "input": "What processes are running?",
+      "output": "get_process_info"
+    },
+    {
+      "input": "Show memory info",
+      "output": "get_memory_info"
+    },
+    {
+      "input": "System load and processes",
+      "output": "get_cpu_info,get_process_info"
+    },
+    {
+      "input": "How much memory am I using?",
+      "output": "get_memory_info"
+    },
+    {
+      "input": "Tell me about network",
+      "output": "get_network_info"
+    }
+  ],
+  "stats": {
+    "total": 81,
+    "train": 64,
+    "validation": 17,
+    "functions": [
+      "get_uptime_info",
+      "get_cpu_info",
+      "get_memory_info",
+      "get_disk_info",
+      "get_network_info",
+      "get_system_info",
+      "get_process_info",
+      "get_user_info"
+    ],
+    "num_functions": 8
+  }
+}
