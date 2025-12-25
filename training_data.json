@@ -1,346 +1,102 @@
 {
   "train": [
     {
-      "input": "Processor details?",
-      "output": "get_cpu_info"
+      "input": "What processes are running?\n\nSystem Data:\nTotal Processes:\n127\n\nTop Memory Processes:\n  explorer.exe: 450.2 MB\n  chrome.exe: 1850.5 MB\n  vs-code.exe: 620.3 MB\n\nTop CPU Processes:\n  chrome.exe: 15.3% CPU\n  vs-code.exe: 8.2% CPU\n  discord.exe: 3.5% CPU",
+      "output": "call:console{message:<escape>You have 127 processes running. Chrome is the biggest consumer with 1.8 GB of RAM and 15.3% CPU usage. VS Code is using 620 MB of RAM and 8.2% CPU. Discord is also running but using minimal resources. Consider closing unused browsers or applications if you need more system resources.<escape>}"
     },
     {
-      "input": "What is using the most memory?",
-      "output": "get_process_info"
+      "input": "Tell me about CPU\n\nSystem Data:\nCPU Cores:\nPhysical: 8, Logical: 16\n\nCPU Usage:\n12.4%\n\nCPU Frequency:\nCurrent: 1800 MHz, Max: 3600 MHz",
+      "output": "call:console{message:<escape>You have 8 physical cores with 16 logical threads. CPU usage is low at 12.4%, so your processor has plenty of spare capacity. Currently running at 1800 MHz but can boost up to 3600 MHz when needed.<escape>}"
     },
     {
-      "input": "Running processes?",
-      "output": "get_process_info"
+      "input": "Who am I logged in as?\n\nSystem Data:\nCurrent User:\nammob\n\nLogged In Users:\n  ammob (from local, started 14:30)",
+      "output": "call:console{message:<escape>You are logged in as 'ammob'. You're the only user currently logged into this system locally. Your session started at 14:30.<escape>}"
     },
     {
-      "input": "Health check - CPU, memory, and disk",
-      "output": "get_cpu_info,get_memory_info,get_disk_info"
+      "input": "Show network information\n\nSystem Data:\nHostname:\nWORKSTATION-PRO\n\nIP (WiFi):\n172.16.0.88",
+      "output": "call:console{message:<escape>Your system hostname is 'WORKSTATION-PRO'. Your WiFi IP address is 172.16.0.88. You're connected via WiFi to what appears to be a private network.<escape>}"
     },
     {
-      "input": "Swap usage?",
-      "output": "get_memory_info"
+      "input": "Show system info\n\nSystem Data:\nOS:\nWindows 11 Pro\n\nVersion:\n10.0.22621 Build 22621\n\nArchitecture:\nAMD64\n\nProcessor:\nAMD Ryzen 9 5950X @ 3.40GHz",
+      "output": "call:console{message:<escape>You're running Windows 11 Pro (Build 22621) on AMD64 with a powerful AMD Ryzen 9 5950X processor. This is a professional-grade system perfect for heavy workloads.<escape>}"
     },
     {
-      "input": "OS information?",
-      "output": "get_system_info"
+      "input": "Show uptime\n\nSystem Data:\nSystem Uptime:\nUp 2 days, 14 hours, 5 minutes (since 2024-12-23 08:15)",
+      "output": "call:console{message:<escape>Your system has been up for 2 days, 14 hours, and 5 minutes since December 23rd at 08:15. You may want to consider a reboot soon for routine maintenance.<escape>}"
     },
     {
-      "input": "Show top processes",
-      "output": "get_process_info"
+      "input": "Tell me about processes\n\nSystem Data:\nTotal Processes:\n156\n\nTop Memory Processes:\n  explorer.exe: 320.0 MB\n  python.exe: 2800.0 MB\n  docker-desktop.exe: 1500.0 MB\n\nTop CPU Processes:\n  python.exe: 45.2% CPU\n  docker-desktop.exe: 18.3% CPU\n  explorer.exe: 1.2% CPU",
+      "output": "call:console{message:<escape>You have 156 processes running. Python is consuming significant resources at 2.8 GB RAM and 45.2% CPU - you likely have a heavy computation or machine learning task running. Docker is also active with 1.5 GB RAM and 18.3% CPU. Your system is under moderate load. These are expected for development work.<escape>}"
     },
     {
-      "input": "What's my memory usage?",
-      "output": "get_memory_info"
+      "input": "How long is uptime?\n\nSystem Data:\nSystem Uptime:\nUp 1 hour, 23 minutes (since 2024-12-25 13:45)",
+      "output": "call:console{message:<escape>Your system was just started about 1 hour and 23 minutes ago at 13:45. This is a fresh boot.<escape>}"
     },
     {
-      "input": "How much uptime does the system have?",
-      "output": "get_uptime_info"
+      "input": "Tell me about my system\n\nSystem Data:\nOS:\nWindows 11 Home\n\nVersion:\n10.0.22631 Build 22631\n\nArchitecture:\nAMD64\n\nProcessor:\nIntel(R) Core(TM) i5-13600K CPU @ 3.50GHz",
+      "output": "call:console{message:<escape>You're running Windows 11 Home (Build 22631) on an Intel Core i5-13600K processor with AMD64 architecture. This is a modern system with good performance for everyday computing and light development work.<escape>}"
     },
     {
-      "input": "What users are logged in?",
-      "output": "get_user_info"
+      "input": "Show running processes\n\nSystem Data:\nTotal Processes:\n89\n\nTop Memory Processes:\n  explorer.exe: 280.5 MB\n  firefox.exe: 1200.0 MB\n  sublime-text.exe: 350.8 MB\n\nTop CPU Processes:\n  firefox.exe: 22.4% CPU\n  sublime-text.exe: 5.1% CPU\n  windows-search.exe: 2.3% CPU",
+      "output": "call:console{message:<escape>You have 89 processes running. Firefox is dominating resources with 1.2 GB RAM and 22.4% CPU usage - it's clearly doing something intensive. Sublime Text is also using a moderate amount of resources at 350 MB RAM and 5.1% CPU. You might want to close some Firefox tabs to improve performance.<escape>}"
     },
     {
-      "input": "Check the system uptime",
-      "output": "get_uptime_info"
+      "input": "Tell me about my memory usage\n\nSystem Data:\nMemory Usage:\nRAM:\n  Total: 16.0 GB\n  Used: 8.2 GB (51.2%)\n  Available: 7.8 GB\n\nSwap:\n  Total: 8.0 GB\n  Used: 0.5 GB (6.2%)\n  Free: 7.5 GB",
+      "output": "call:console{message:<escape>You're using about half of your 16 GB RAM (8.2 GB). With 7.8 GB still available, you have decent headroom. Swap usage is very low at just 0.5 GB, which is good - your system isn't under memory pressure.<escape>}"
     },
     {
-      "input": "How much free memory?",
-      "output": "get_memory_info"
+      "input": "What operating system am I running?\n\nSystem Data:\nOS:\nWindows 10 Home\n\nVersion:\n10.0.19045 Build 19045\n\nArchitecture:\nAMD64\n\nProcessor:\nIntel(R) Core(TM) i7-9700K CPU @ 3.60GHz",
+      "output": "call:console{message:<escape>You're running Windows 10 Home (Build 19045) on an AMD64 architecture with an Intel Core i7-9700K processor. This is a solid configuration for most tasks including development and gaming.<escape>}"
     },
     {
-      "input": "What is the hostname?",
-      "output": "get_network_info"
+      "input": "Get network info\n\nSystem Data:\nHostname:\nDESKTOP-GAMING\n\nIP (Ethernet):\n192.168.1.45\n\nIP (WiFi):\n192.168.1.120",
+      "output": "call:console{message:<escape>Your system is named 'DESKTOP-GAMING'. You have two network connections active: Ethernet on 192.168.1.45 and WiFi on 192.168.1.120. Both connections appear to be on your local network.<escape>}"
     },
     {
-      "input": "User details?",
-      "output": "get_user_info"
+      "input": "How much disk space is left?\n\nSystem Data:\nDisk C:\\:\nC:\\ (C:\\): 411.1 GB/475.9 GB (86.4% used)\n\nDisk D:\\:\nD:\\ (D:\\): 1.7 TB/1.8 TB (95.1% used)",
+      "output": "call:console{message:<escape>Your C: drive is 86.4% full with 411.1 GB used out of 475.9 GB. Your D: drive is critically full at 95.1% (1.7 TB of 1.8 TB used). You should consider deleting unnecessary files or upgrading your storage soon, especially on the D: drive.<escape>}"
     },
     {
-      "input": "What is my RAM usage?",
-      "output": "get_memory_info"
+      "input": "How long has my system been running?\n\nSystem Data:\nSystem Uptime:\nUp 45 days, 3 hours, 22 minutes (since 2024-11-10 14:30)",
+      "output": "call:console{message:<escape>Your system has been running continuously for 45 days, 3 hours, and 22 minutes since November 10th at 14:30. That's a great uptime - your system is very stable!<escape>}"
     },
     {
-      "input": "How long is the system up?",
-      "output": "get_uptime_info"
+      "input": "Memory status\n\nSystem Data:\nMemory Usage:\nRAM:\n  Total: 8.0 GB\n  Used: 7.2 GB (90.0%)\n  Available: 0.8 GB\n\nSwap:\n  Total: 4.0 GB\n  Used: 3.1 GB (77.5%)\n  Free: 0.9 GB",
+      "output": "call:console{message:<escape>WARNING: Your system is running very low on memory! You're using 7.2 GB out of 8.0 GB RAM (90%), leaving only 0.8 GB free. Additionally, your swap is also heavily used at 3.1 GB out of 4.0 GB. Consider closing some applications to free up memory.<escape>}"
     },
     {
-      "input": "Top CPU processes?",
-      "output": "get_process_info"
+      "input": "What is my IP address?\n\nSystem Data:\nHostname:\nLAPTOP-USER\n\nIP (Ethernet):\n10.0.0.50",
+      "output": "call:console{message:<escape>Your computer hostname is 'LAPTOP-USER'. Your IP address on the Ethernet connection is 10.0.0.50. You appear to be on a company or institutional network (10.0.0.x range).<escape>}"
     },
     {
-      "input": "What is my IP address?",
-      "output": "get_network_info"
+      "input": "What's my CPU status?\n\nSystem Data:\nCPU Cores:\nPhysical: 4, Logical: 8\n\nCPU Usage:\n87.3%\n\nCPU Frequency:\nCurrent: 3800 MHz, Max: 4200 MHz",
+      "output": "call:console{message:<escape>Your CPU is heavily loaded at 87.3% usage with 4 physical cores and 8 logical cores available. The processor is running at 3800 MHz out of a maximum of 4200 MHz. You might want to check what processes are consuming CPU resources.<escape>}"
     },
     {
-      "input": "How long has the system been running?",
-      "output": "get_uptime_info"
-    },
-    {
-      "input": "Network configuration?",
-      "output": "get_network_info"
-    },
-    {
-      "input": "Process information?",
-      "output": "get_process_info"
-    },
-    {
-      "input": "Distribution info?",
-      "output": "get_system_info"
-    },
-    {
-      "input": "Current user?",
-      "output": "get_user_info"
-    },
-    {
-      "input": "Check memory status",
-      "output": "get_memory_info"
-    },
-    {
-      "input": "Network details?",
-      "output": "get_network_info"
-    },
-    {
-      "input": "What's consuming resources?",
-      "output": "get_process_info,get_memory_info"
-    },
-    {
-      "input": "Kernel version?",
-      "output": "get_system_info"
-    },
-    {
-      "input": "Tell me about the processor",
-      "output": "get_cpu_info"
-    },
-    {
-      "input": "What's my IP?",
-      "output": "get_network_info"
-    },
-    {
-      "input": "Free disk space?",
-      "output": "get_disk_info"
-    },
-    {
-      "input": "How full is the disk?",
-      "output": "get_disk_info"
-    },
-    {
-      "input": "What is my CPU load?",
-      "output": "get_cpu_info"
-    },
-    {
-      "input": "Top memory processes?",
-      "output": "get_process_info"
-    },
-    {
-      "input": "What's the uptime?",
-      "output": "get_uptime_info"
-    },
-    {
-      "input": "Who is the current user?",
-      "output": "get_user_info"
-    },
-    {
-      "input": "CPU cores and load?",
-      "output": "get_cpu_info"
-    },
-    {
-      "input": "What's the CPU status?",
-      "output": "get_cpu_info"
-    },
-    {
-      "input": "RAM available?",
-      "output": "get_memory_info"
-    },
-    {
-      "input": "What are the CPU details?",
-      "output": "get_cpu_info"
-    },
-    {
-      "input": "How many CPU cores do I have?",
-      "output": "get_cpu_info"
-    },
-    {
-      "input": "Show storage information",
-      "output": "get_disk_info"
-    },
-    {
-      "input": "What is the system uptime?",
-      "output": "get_uptime_info"
-    },
-    {
-      "input": "Check network status",
-      "output": "get_network_info"
-    },
-    {
-      "input": "What is using the most CPU?",
-      "output": "get_process_info"
-    },
-    {
-      "input": "User list?",
-      "output": "get_user_info"
-    },
-    {
-      "input": "What is my disk space?",
-      "output": "get_disk_info"
-    },
-    {
-      "input": "Memory stats?",
-      "output": "get_memory_info"
-    },
-    {
-      "input": "Disk utilization?",
-      "output": "get_disk_info"
-    },
-    {
-      "input": "What Linux version?",
-      "output": "get_system_info"
-    },
-    {
-      "input": "How much disk space is available?",
-      "output": "get_disk_info"
-    },
-    {
-      "input": "Memory and swap information",
-      "output": "get_memory_info"
-    },
-    {
-      "input": "Check CPU information",
-      "output": "get_cpu_info"
-    },
-    {
-      "input": "Show system information",
-      "output": "get_system_info"
-    },
-    {
-      "input": "Check disk usage",
-      "output": "get_disk_info"
-    },
-    {
-      "input": "What is the kernel version?",
-      "output": "get_system_info"
-    },
-    {
-      "input": "IP address details?",
-      "output": "get_network_info"
-    },
-    {
-      "input": "Network and system info",
-      "output": "get_network_info,get_system_info"
-    },
-    {
-      "input": "Tell me about RAM",
-      "output": "get_memory_info"
-    },
-    {
-      "input": "Show network information",
-      "output": "get_network_info"
-    },
-    {
-      "input": "When was the system started?",
-      "output": "get_uptime_info"
-    },
-    {
-      "input": "List processes?",
-      "output": "get_process_info"
-    },
-    {
-      "input": "What OS am I running?",
-      "output": "get_system_info"
-    },
-    {
-      "input": "Show CPU information",
-      "output": "get_cpu_info"
-    },
-    {
-      "input": "Complete system status",
-      "output": "get_uptime_info,get_cpu_info,get_memory_info,get_disk_info,get_network_info"
+      "input": "Show user information\n\nSystem Data:\nCurrent User:\njohn.smith\n\nLogged In Users:\n  john.smith (from local, started 09:15)\n  admin (from 192.168.1.100, started 10:30)",
+      "output": "call:console{message:<escape>You are logged in as 'john.smith' locally since 09:15. Additionally, there's an 'admin' user connected remotely from 192.168.1.100 who logged in at 10:30. Your system has 2 active user sessions.<escape>}"
     }
   ],
   "validation": [
     {
-      "input": "Disk storage details?",
-      "output": "get_disk_info"
+      "input": "Show disk usage\n\nSystem Data:\nDisk C:\\:\nC:\\ (C:\\): 250.0 GB/500.0 GB (50.0% used)\n\nDisk D:\\:\nD:\\ (D:\\): 50.0 GB/1.0 TB (5.0% used)",
+      "output": "call:console{message:<escape>You have plenty of disk space available. Your C: drive is 50% full (250 GB used of 500 GB), and your D: drive has lots of room with only 5% usage (50 GB of 1 TB). Your storage situation is very healthy.<escape>}"
     },
     {
-      "input": "Hostname information?",
-      "output": "get_network_info"
+      "input": "Disk space check\n\nSystem Data:\nDisk C:\\:\nC:\\ (C:\\): 480.0 GB/500.0 GB (96.0% used)\n\nDisk D:\\:\nD:\\ (D:\\): 850.0 GB/1.0 TB (85.0% used)",
+      "output": "call:console{message:<escape>ALERT: Your C: drive is almost full at 96% capacity (480 GB of 500 GB). Your D: drive is also heavily used at 85% (850 GB of 1 TB). Both drives need attention soon. Free up space or consider adding more storage.<escape>}"
     },
     {
-      "input": "Show me full system diagnostics",
-      "output": "get_system_info,get_cpu_info,get_memory_info,get_disk_info"
+      "input": "How much RAM am I using?\n\nSystem Data:\nMemory Usage:\nRAM:\n  Total: 31.6 GB\n  Used: 15.8 GB (49.8%)\n  Available: 15.9 GB\n\nSwap:\n  Total: 23.0 GB\n  Used: 2.6 GB (11.4%)\n  Free: 20.4 GB",
+      "output": "call:console{message:<escape>Your system has 31.6 GB of total RAM, with 15.8 GB currently in use (49.8%). You still have 15.9 GB available for applications. Swap usage is minimal at 2.6 GB out of 23.0 GB, so your memory situation is healthy.<escape>}"
     },
     {
-      "input": "Show me uptime info",
-      "output": "get_uptime_info"
+      "input": "How many CPU cores do I have?\n\nSystem Data:\nCPU Cores:\nPhysical: 14, Logical: 20\n\nCPU Usage:\n16.5%\n\nCPU Frequency:\nCurrent: 2300 MHz, Max: 2300 MHz",
+      "output": "call:console{message:<escape>You have a powerful processor with 14 physical cores and 20 logical cores (including hyperthreading). Your CPU is currently running at 2300 MHz with 16.5% utilization, so you have plenty of processing power available.<escape>}"
     },
     {
-      "input": "What's the OS?",
-      "output": "get_system_info"
-    },
-    {
-      "input": "Show user information",
-      "output": "get_user_info"
-    },
-    {
-      "input": "System details?",
-      "output": "get_system_info"
-    },
-    {
-      "input": "Who's on the system?",
-      "output": "get_user_info"
-    },
-    {
-      "input": "Storage capacity?",
-      "output": "get_disk_info"
-    },
-    {
-      "input": "How many cores?",
-      "output": "get_cpu_info"
-    },
-    {
-      "input": "How much memory left?",
-      "output": "get_memory_info"
-    },
-    {
-      "input": "Currently logged in users?",
-      "output": "get_user_info"
-    },
-    {
-      "input": "What processes are running?",
-      "output": "get_process_info"
-    },
-    {
-      "input": "Show memory info",
-      "output": "get_memory_info"
-    },
-    {
-      "input": "System load and processes",
-      "output": "get_cpu_info,get_process_info"
-    },
-    {
-      "input": "How much memory am I using?",
-      "output": "get_memory_info"
-    },
-    {
-      "input": "Tell me about network",
-      "output": "get_network_info"
+      "input": "Who is logged in?\n\nSystem Data:\nCurrent User:\nadministrator\n\nLogged In Users:\n  (No other sessions)",
+      "output": "call:console{message:<escape>You are logged in as 'administrator'. You are the only user currently logged into this system - no other sessions are active.<escape>}"
     }
-  ],
-  "stats": {
-    "total": 81,
-    "train": 64,
-    "validation": 17,
-    "functions": [
-      "get_uptime_info",
-      "get_cpu_info",
-      "get_memory_info",
-      "get_disk_info",
-      "get_network_info",
-      "get_system_info",
-      "get_process_info",
-      "get_user_info"
-    ],
-    "num_functions": 8
-  }
+  ]
 }
