@@ -163,7 +163,8 @@ class FineTunedAgent:
         ]
 
         for pattern in patterns:
-            match = re.search(pattern, response, re.DOTALL)
+            # Use IGNORECASE to match both "call:" and "Call:"
+            match = re.search(pattern, response, re.DOTALL | re.IGNORECASE)
             if match:
                 func_name = match.group(1)
                 params_str = match.group(2) or "{}"
@@ -241,27 +242,23 @@ class FineTunedAgent:
 
         result_truncated = result[:800] if len(result) > 800 else result
 
+        # Format to match training data: "user_query\n\nSystem Data:\nraw_data"
         messages_pass2 = [
             {
-                "role": "developer",
-                "content": f"""You are a helpful system assistant.
-Summarize this system data for the user.
-
-DATA:
-{result_truncated}
-
-Call console() with a helpful summary of the above data. Include the actual numbers and values from the data."""
-            },
-            {"role": "user", "content": f"Summarize this data: {result_truncated[:200]}"}
+                "role": "user",
+                "content": f"{user_input}\n\nSystem Data:\n{result_truncated}"
+            }
         ]
 
         response2 = self.call_model(self.model_pass2, messages_pass2, self.build_tools_pass2())
+        print(f"🔍 Model output: {response2[:150]}...")  # Debug
         func_name2, params = self.parse_function_call(response2)
 
         if func_name2 == "console" and "message" in params:
             console(params["message"])
         else:
             # Fallback
+            print(f"⚠️  Function parsing failed. func_name={func_name2}, params={params}")
             console(f"Here's the system data:\n{result_truncated[:500]}")
 
     def run(self):

@@ -178,10 +178,27 @@ def setup_lora_finetuning():
 
     final_model_path = output_dir / "final_model"
     final_model_path.mkdir(exist_ok=True)
-    trainer.save_model(str(final_model_path))
-    tokenizer.save_pretrained(str(final_model_path))
 
-    print(f"✓ Final model saved to: {final_model_path}")
+    # Save model (LoRA adapters)
+    trainer.save_model(str(final_model_path))
+    print(f"✓ LoRA adapters saved to: {final_model_path}")
+
+    # Try to save tokenizer (may fail on Windows due to file locking)
+    try:
+        # Free up memory first
+        import gc
+        del trainer
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+
+        tokenizer.save_pretrained(str(final_model_path))
+        print(f"✓ Tokenizer saved to: {final_model_path}")
+    except Exception as e:
+        print(f"⚠️  Tokenizer save failed (Windows file lock): {e}")
+        print(f"   Don't worry - you can load tokenizer from base model!")
+
+    print(f"\n✓ Model ready at: {final_model_path}")
 
     # Show final metrics
     if hasattr(trainer.state, "best_metric"):
